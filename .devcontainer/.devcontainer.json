@@ -1,0 +1,3 @@
+{
+    "postCreateCommand": "docker run --rm -it -v \"$(pwd)/dns:/dns\" ghcr.io/stackexchange/dnscontrol write-types"
+}

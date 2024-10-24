@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "DNS-Push",
+        "type": "shell",
+        "command": "docker",
+        "args": [
+          "run",
+          "--rm",
+          "-it",
+          "-v",
+          "$(pwd)/dns:/dns",
+          "-e",
+          "OVH_CONSUMER_KEY",
+          "-e",
+          "OVH_APP_SECRET_KEY",
+          "-e",
+          "OVH_APP_KEY",
+          "ghcr.io/stackexchange/dnscontrol",
+          "push"
+        ],
+        "problemMatcher": []
+      },
+      {
+        "label": "DNS-Preview",
+        "type": "shell",
+        "command": "docker",
+        "args": [
+          "run",
+          "--rm",
+          "-it",
+          "-v",
+          "$(pwd)/dns:/dns",
+          "-e",
+          "OVH_CONSUMER_KEY",
+          "-e",
+          "OVH_APP_SECRET_KEY",
+          "-e",
+          "OVH_APP_KEY",
+          "ghcr.io/stackexchange/dnscontrol",
+          "preview"
+        ],
+        "problemMatcher": []
+      }
+    ]
+  }
