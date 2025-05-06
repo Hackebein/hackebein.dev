@@ -19,15 +19,19 @@ D("hackebein.dev", REG_OVH, DnsProvider(DSP_OVH),
     MX("@", 1, "hosted.mailcow.de."),
     TXT("@", "v=spf1 mx ~all"),
     TXT("@", "mailcow"),
+
+    TXT("_github-pages-challenge-hackebein", "629cf02ee13c9ce5859c79bd1a1ca8"),
     
     // hackebein.dev, www.hackebein.dev
     GITHUB_PAGES_IPV4S.map(function(ip) { return A("@", ip); }),
     //GITHUB_PAGES_IPV4S.map(function(ip) { return A("www", ip); }),
     GITHUB_PAGES_IPV6S.map(function(ip) { return AAAA("@", ip); }),
     //GITHUB_PAGES_IPV6S.map(function(ip) { return AAAA("www", ip); }),
-    CNAME("www", "hackebein.github.io."),
+    CNAME("www", "hackebein.dev."),
 
     // vpm.hackebein.dev
-    CNAME("vpm", "hackebein.github.io."),
-    TXT("_github-pages-challenge-hackebein", "629cf02ee13c9ce5859c79bd1a1ca8"),
+    CNAME("vpm", "hackebein.dev."),
+
+    // vpmm.hackebein.dev
+    CNAME("vpmm", "hackebein.dev."),
 END);
