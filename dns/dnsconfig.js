@@ -27,11 +27,11 @@ D("hackebein.dev", REG_OVH, DnsProvider(DSP_OVH),
     //GITHUB_PAGES_IPV4S.map(function(ip) { return A("www", ip); }),
     GITHUB_PAGES_IPV6S.map(function(ip) { return AAAA("@", ip); }),
     //GITHUB_PAGES_IPV6S.map(function(ip) { return AAAA("www", ip); }),
-    CNAME("www", "hackebein.dev."),
+    CNAME("www", "hackebein.github.io."),
 
     // vpm.hackebein.dev
-    CNAME("vpm", "hackebein.dev."),
+    CNAME("vpm", "hackebein.github.io."),
 
     // vpmm.hackebein.dev
-    CNAME("vpmm", "hackebein.dev."),
+    CNAME("vpmm", "hackebein.github.io."),
 END);
