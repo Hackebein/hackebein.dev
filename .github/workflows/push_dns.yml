@@ -18,6 +18,8 @@ jobs:
           OVH_APP_KEY: ${{ secrets.OVH_APP_KEY }}
           OVH_APP_SECRET_KEY: ${{ secrets.OVH_APP_SECRET_KEY }}
           OVH_CONSUMER_KEY: ${{ secrets.OVH_CONSUMER_KEY }}
+          CF_ACCOUNTID: ${{ secrets.CF_ACCOUNTID }}
+          CF_APITOKEN: ${{ secrets.CF_APITOKEN }}
         with:
           args: push
           config_file: 'dns/dnsconfig.js'
