@@ -17,6 +17,10 @@
           "OVH_APP_SECRET_KEY",
           "-e",
           "OVH_APP_KEY",
+          "-e",
+          "CF_ACCOUNTID",
+          "-e",
+          "CF_APITOKEN",
           "ghcr.io/stackexchange/dnscontrol",
           "push"
         ],
@@ -38,6 +42,10 @@
           "OVH_APP_SECRET_KEY",
           "-e",
           "OVH_APP_KEY",
+          "-e",
+          "CF_ACCOUNTID",
+          "-e",
+          "CF_APITOKEN",
           "ghcr.io/stackexchange/dnscontrol",
           "preview"
         ],

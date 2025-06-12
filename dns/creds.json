@@ -1,9 +1,14 @@
 {
-    "ovh": {
-      "TYPE": "OVH",
-      "app-key": "$OVH_APP_KEY",
-      "app-secret-key": "$OVH_APP_SECRET_KEY",
-      "consumer-key": "$OVH_CONSUMER_KEY",
-      "endpoint": "eu"
-    }
+  "ovh": {
+    "TYPE": "OVH",
+    "app-key": "$OVH_APP_KEY",
+    "app-secret-key": "$OVH_APP_SECRET_KEY",
+    "consumer-key": "$OVH_CONSUMER_KEY",
+    "endpoint": "eu"
+  },
+  "cloudflare": {
+    "TYPE": "CLOUDFLAREAPI",
+    "accountid": "$CF_ACCOUNTID",
+    "apitoken": "$CF_APITOKEN"
   }
+}

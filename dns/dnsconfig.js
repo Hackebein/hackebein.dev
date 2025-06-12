@@ -1,5 +1,12 @@
 var REG_OVH = NewRegistrar("ovh");
-var DSP_OVH = NewDnsProvider("ovh");
+var DSP_CF = NewDnsProvider("cloudflare");
+
+DEFAULTS(
+  CF_PROXY_DEFAULT_OFF
+);
+
+var CF_PROXY_ON = {"cloudflare_proxy": "on"};
+var CF_PROXY_FULL = {"cloudflare_proxy": "full"};
 
 var GITHUB_PAGES_IPV4S = [
     "185.199.108.153",
@@ -14,7 +21,7 @@ var GITHUB_PAGES_IPV6S = [
     "2606:50c0:8003::153"
 ];
 
-D("hackebein.dev", REG_OVH, DnsProvider(DSP_OVH),
+D("hackebein.dev", REG_OVH, DnsProvider(DSP_CF),
     // email
     MX("@", 1, "hosted.mailcow.de."),
     TXT("@", "v=spf1 mx ~all"),
