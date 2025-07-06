@@ -5,8 +5,12 @@ DEFAULTS(
   CF_PROXY_DEFAULT_OFF
 );
 
-var CF_PROXY_ON = {"cloudflare_proxy": "on"};
-var CF_PROXY_FULL = {"cloudflare_proxy": "full"};
+var CF_PROXY_ON = {
+    "cloudflare_proxy": "on"
+};
+var CF_PROXY_FULL = {
+    "cloudflare_proxy": "full"
+};
 
 var GITHUB_PAGES_IPV4S = [
     "185.199.108.153",
@@ -40,5 +44,5 @@ D("hackebein.dev", REG_OVH, DnsProvider(DSP_CF),
     CNAME("vpm", "hackebein.github.io."),
 
     // vpmm.hackebein.dev
-    CNAME("vpmm", "hackebein.github.io."),
+    CNAME("vpmm", "hackebein.github.io.", CF_PROXY_ON),
 END);
