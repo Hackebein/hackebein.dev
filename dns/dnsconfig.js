@@ -26,6 +26,7 @@ var GITHUB_PAGES_IPV6S = [
 ];
 
 D("hackebein.dev", REG_OVH, DnsProvider(DSP_CF),
+    DefaultTTL(1),
     // email
     MX("@", 1, "hosted.mailcow.de."),
     TXT("@", "v=spf1 mx ~all"),
@@ -43,6 +44,6 @@ D("hackebein.dev", REG_OVH, DnsProvider(DSP_CF),
     // vpm.hackebein.dev
     CNAME("vpm", "hackebein.github.io."),
 
-    // vpmm.hackebein.dev
-    CNAME("vpmm", "hackebein.github.io.", CF_PROXY_ON),
+    // vpmm.hackebein.dev redirect to vpmm.dev
+    A("vpmm", "192.0.2.1", CF_PROXY_ON),
 END);
