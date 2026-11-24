@@ -41,6 +41,9 @@ D("hackebein.dev", REG_OVH, DnsProvider(DSP_CF),
     //GITHUB_PAGES_IPV6S.map(function(ip) { return AAAA("www", ip); }),
     CNAME("www", "hackebein.github.io."),
 
+    // sit.hackebein.dev
+    CNAME("sit", "sit-wandarbeiten.pages.dev.", CF_PROXY_ON),
+
     // vpm.hackebein.dev
     CNAME("vpm", "hackebein.github.io."),
 
